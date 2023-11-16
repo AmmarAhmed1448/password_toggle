@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+        .container{
+            margin: auto;
+            width: 50%;
+        }
+
+        #id, #password{
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="h1">Enter your credentials</h1>
+        <form action="#">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <br>
+            <input type="checkbox" id="tooglePasswordCheckBox" onchange="togglePassword()">
+            <label for="togglePasswordCheckBox">Show Password</label>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    const tooglePasswordCheckBox = document.getElementById("tooglePasswordCheckBox");
+    const password = document.getElementById("password");
+
+    const togglePassword = () => {
+        if (password.type === "password") {
+            password.type = "text"
+        }
+        else if (password.type === "text") {
+            password.type = "password"
+        }
+    }
+</script>
+
+</html>
